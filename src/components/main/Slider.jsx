@@ -1,5 +1,5 @@
 
-import home from "../../assets/img/home.jpeg";
+import home from "../../assets/images/home.jpeg";
 
 const LOGOS = [
     <img src={home} alt="content-description" width={"450px"} height={"450px"} className="text-slate-800" />,

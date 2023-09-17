@@ -1,4 +1,4 @@
-import bc from "../../assets/img/aboutpc.jpeg";
+import bc from "../../assets/images/aboutpc.jpeg";
 import { FaRegHandPeace } from "react-icons/fa";
 
 export const data = [

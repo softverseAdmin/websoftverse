@@ -1,9 +1,9 @@
 import React from "react";
-import img from "../../assets/img/home.jpeg";
+import img from "../../assets/images/home.jpeg";
 import { styles } from "../styles";
 import InfiniteSlider from "./Slider";
-import about from "../../assets/img/aboutpc.jpeg";
-import bc from "../../assets/img/bc.jpeg";
+import about from "../../assets/images/aboutpc.jpeg";
+import bc from "../../assets/images/bc.jpeg";
 import { data, file, holder, QA } from "./data.js";
 import RevealOnScroll from "./Fade";
 
@@ -14,8 +14,8 @@ export default function Main() {
         <div className="w-3/12 gap-5 flex justify-start flex-col items-center">
           <div className="w-100">
             <RevealOnScroll>
-              <h2 className={`${styles.sectionHeadText} p-2 `}>Title</h2>
-              <p className={`${styles.sectionSubText} p-2`}>We Are The Best</p>
+              {/* <h2 className={`${styles.sectionHeadText} p-2 `}>Title</h2>
+              <p className={`${styles.sectionSubText} p-2`}>We Are The Best</p> */}
             </RevealOnScroll>
           </div>
         </div>
@@ -52,7 +52,7 @@ export default function Main() {
         </div>
 
         <div
-          className="flex justify-center gap-2 flex-col items-center drop-shadow-lg 
+          className="flex justify-center gap-2 bg-white flex-col items-center drop-shadow-lg 
           w-[270px] sm:min-w-[450px] absolute sm:top-[-230px] sm:h-[500px] h-[230px] top-[-20px] 
           sm:right-0 xs:left-0"
         >
@@ -77,37 +77,37 @@ export default function Main() {
       <div className={`${styles.padding} w-full my-4`}>
         <div className="flex mx-auto md:w-8/12 justify-center flex-col items-center">
           <div className={`${styles.paddingY}`}>
-           <h1 className="text-2xl"> お知らせ </h1>
+            <h1 className="text-2xl"> お知らせ </h1>
           </div>
           <div className="flex justify-start flex-col">
-          {holder.map((hold, index) => {
-            const { title, sub, desc } = hold;
-            return (
-              <>
-                <RevealOnScroll>
-                  <div
-                    key={index}
-                    className="grid grid-cols-12 my-3 transition-all"
-                  >
-                    <div className="col-span-6 sm:col-span-2 md:col-span-2 my-1 lg:col-span-2 xl:col-span-2">
-                      <h1 className="inline">{title}</h1>
+            {holder.map((hold, index) => {
+              const { title, sub, desc } = hold;
+              return (
+                <>
+                  <RevealOnScroll>
+                    <div
+                      key={index}
+                      className="grid grid-cols-12 my-3 transition-all"
+                    >
+                      <div className="col-span-6 sm:col-span-2 md:col-span-2 my-1 lg:col-span-2 xl:col-span-2">
+                        <h1 className="inline">{title}</h1>
+                      </div>
+                      <div className="col-span-6 sm:col-span-4 md:col-span-4 my-1 lg:col-span-3 xl:col-span-3">
+                        <p className="inline hover:opacity-50 cursor-pointer bg-black text-white">
+                          {sub}
+                        </p>
+                      </div>
+                      <div className="col-span-12 sm:col-span-8 md:col-span-6 my-1 lg:col-span-7 xl:col-span-7">
+                        <p className=" inline hover:opacity-50 cursor-pointer">
+                          {desc}
+                        </p>
+                      </div>
                     </div>
-                    <div className="col-span-6 sm:col-span-4 md:col-span-4 my-1 lg:col-span-3 xl:col-span-3">
-                      <p className="inline hover:opacity-50 cursor-pointer bg-black text-white">
-                        {sub}{" "}
-                      </p>
-                    </div>
-                    <div className="col-span-12 sm:col-span-8 md:col-span-6 my-1 lg:col-span-7 xl:col-span-7">
-                      <p className=" inline hover:opacity-50 cursor-pointer">
-                        {desc}
-                      </p>
-                    </div>
-                  </div>
-                  <hr className={`border my-5 rounded-full  w-full`} />
-                </RevealOnScroll>
-              </>
-            );
-          })}
+                    <hr className={`border my-5 rounded-full  w-full`} />
+                  </RevealOnScroll>
+                </>
+              );
+            })}
           </div>
         </div>
       </div>
@@ -129,12 +129,10 @@ export default function Main() {
           {" "}
           <RevealOnScroll>
             <div
-              className={`absolute bottom-[10%] flex flex-col bg-transparent ${styles.padding}`}
+              className={`absolute bottom-[10%] flex flex-col  ${styles.padding}`}
             >
-              <div
-                className={`${styles.padding} flex items-center bg-transparent gap-5`}
-              >
-                <h1 className={`text-white bg-transparent`}>行覚寺について</h1>
+              <div className={`${styles.padding} flex items-center gap-5`}>
+                <h1 className={`text-white `}>行覚寺について</h1>
                 <hr className="w-[60px] border border-[#fff]" />
               </div>
               <p
@@ -198,7 +196,8 @@ export default function Main() {
             return (
               <div
                 key={index}
-                className="mx-auto rounded overflow-hidden shadow-lg cursor-pointer 
+                className="
+                mx-auto rounded overflow-hidden shadow-lg cursor-pointer 
                 transition-colors duration-1000 ease-in delay-0 hover:shadow-2xl
                 col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-6 xl:col-span-6"
               >
@@ -207,13 +206,15 @@ export default function Main() {
                   src={image}
                   alt="Sunset in the mountains"
                 />
-                <div className="px-6 py-4">
-                  <div className="font-bold text-xl mb-2">{title}</div>
-                  <p class="text-gray-700 text-base">{text}</p>
+                <div className={`${styles.padding}`}>
+                  <div className="font-bold text-3xl mb-4">{title}</div>
+                  <p class="text-gray-700 my-4 text-2xl leading-10">{text}</p>
                 </div>
-                <div className="flex items-center justify-end gap-5 py-3">
+                <div
+                  className={`flex items-center justify-end gap-5 py-3 my-3`}
+                >
                   <hr className="border-black w-[50px]" />
-                  <span className="px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                  <span className="px-3 py-1 text-xl font-semibold text-gray-700 mr-2">
                     {footer}
                   </span>
                 </div>
@@ -224,7 +225,8 @@ export default function Main() {
       </div>
       <div className={`${styles.padding}`}>
         <div className="flex flex-col justify-center items-center">
-          <hr className="border border-black" />
+          <h1 className="my-5">よくあるご質問</h1>
+          <hr className="border my-5 sm:w-[60vw]" />
           {QA.map((qa, index) => {
             const { Q, A } = qa;
             return (
@@ -242,7 +244,7 @@ export default function Main() {
                     <p className="leading-8">{A}</p>
                   </div>
 
-                  <hr className="border w-full my-3" />
+                  <hr className="border sm:w-[60vw] my-3" />
                 </RevealOnScroll>
               </div>
             );
