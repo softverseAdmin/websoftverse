@@ -30,22 +30,39 @@ export const data = [
 
 export const file = [
   {
-    title: "ねっとで法事",
-    textOne:
-      "インターネット中継により、ご自宅や遠隔地から、ご法事を勤めることが可能となりました。",
-    footer: "ねっとで法事",
+    title: "WEB APPLICATION",
+    textOne:"We work on 『What makes a Progressive Web App special, how they can affect your business, and how to build them.』",
+    footer: "WEB 2.0, WEB 3.0",
     icon: <FaRegHandPeace size={"80"} />,
   },
   {
-    title: "ねっとで年中行事",
-    textOne: "インターネット中継により、ご自宅や遠隔地において、年中行事にご参拝いただけます。行事内容についてはこちらをご確認ください。",
-    footer: "ねっとで年中行事",
+    title: "SYSTEM DEVELOPMENT",
+    textOne:"We work on 『What makes a Progressive Web App special, how they can affect your business, and how to build them.』",
+    footer: "WEB 2.0, WEB 3.0",
     icon: <FaRegHandPeace size={"80"} />,
   },
   {
-    title: "ねっとで法話",
-    textOne:"YouTubeにより、ご自宅や遠隔地で、法話をご視聴いただけます。毎月２回、法華経を中心に「仏教講座」を開講しております。",
-    footer: "ねっとで法話",
+    title: "DIGITAL MARKETING",
+    textOne:"We work on 『What makes a Progressive Web App special, how they can affect your business, and how to build them.』",
+    footer: "WEB 2.0, WEB 3.0",
+    icon: <FaRegHandPeace size={"80"} />,
+  },
+  {
+    title: "IOS/ANDROID APPLICATION",
+    textOne:"We work on 『What makes a Progressive Web App special, how they can affect your business, and how to build them.』",
+    footer: "WEB 2.0, WEB 3.0",
+    icon: <FaRegHandPeace size={"80"} />,
+  },
+  {
+    title: "VIDEO EDITING",
+    textOne:"We work on 『What makes a Progressive Web App special, how they can affect your business, and how to build them.』",
+    footer: "WEB 2.0, WEB 3.0",
+    icon: <FaRegHandPeace size={"80"} />,
+  },
+  {
+    title: "EC SITE DEVELOPMENT",
+    textOne:"We work on 『What makes a Progressive Web App special, how they can affect your business, and how to build them.』",
+    footer: "WEB 2.0, WEB 3.0",
     icon: <FaRegHandPeace size={"80"} />,
   },
 ];

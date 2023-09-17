@@ -51,28 +51,6 @@ export default function Main() {
           </div>
         </div>
 
-        <div
-          className="flex justify-center gap-2 bg-white flex-col items-center drop-shadow-lg 
-          w-[270px] sm:min-w-[450px] absolute sm:top-[-230px] sm:h-[500px] h-[230px] top-[-20px] 
-          sm:right-0 xs:left-0"
-        >
-          <RevealOnScroll>
-            <div className="flex flex-col gap-3">
-              <h2 className={`text-4xl my-3 px-3  animate`}>
-                永遠は一刹那に宿り
-              </h2>
-              <p className={`text-base px-3 `}>
-                時代は進み、現代はインターネットの普及により
-              </p>
-              <p className={`text-base px-3 `}>
-                遠隔地に居ながら、住職と共にご法事や
-              </p>
-              <p className={`text-base px-3 `}>
-                年中行事を勤めることが可能となりました。
-              </p>
-            </div>
-          </RevealOnScroll>
-        </div>
       </div>
       <div className={`${styles.padding} w-full my-4`}>
         <div className="flex mx-auto md:w-8/12 justify-center flex-col items-center">
@@ -150,6 +128,15 @@ export default function Main() {
           </RevealOnScroll>
         </div>
       </div>
+      <div className="flex justify-center items-center w-[100vw] my-5">
+          <RevealOnScroll>
+            <div className="flex group realtive items-center gap-5">
+              <hr className="w-[100px] transition-all delay-0 group-hover:w-[110px] border border-[#000]" />
+              <h2 className="font-2xl">行覚寺について</h2>
+              <hr className="w-[100px] transition-all delay-0 group-hover:w-[110px] border border-[#000]" />
+            </div>
+          </RevealOnScroll>
+        </div>
       <div className={`${styles.paddingY}`}>
         <div className="grid w-[100vw] sm:w-[100vw] md:w-[90vw] mx-auto px-4 grid-cols-12 gap-5  my-3">
           {file.map((f, index) => {
