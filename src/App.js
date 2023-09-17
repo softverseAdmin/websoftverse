@@ -1,10 +1,19 @@
-import './App.css';
-import Menu from './components/menu/Menu';
+import Footer from './components/footer/Footer';
+import Main from './components/main/Main';
+import Menu from './components/Menu/Menu';
 
 function App() {
   return (
     <div className="App">
-      <Menu/>a
+      <div className="header bg-transparent">
+        <Menu />
+      </div>
+      <div className="main">
+        <Main />
+      </div>
+      <div className="footer">
+        <Footer/>
+      </div>
     </div>
   );
 }
