@@ -20,15 +20,13 @@ export default function Main() {
           </div>
         </div>
         <div className={`relative w-full h-screen bg-center bg-no-repeat bg-fixed bg-cover `} style={{ backgroundImage: `url(${video})` }}>
+          <div className='object-fill h-full w-full bg-black opacity-50 text-white z-10 text-9xl text-center'>
+            <h1 className='h-full opacity-90'>Softverse Pvt ltd.</h1>
+          </div>
+          <svg className="animate-bounce w-6 h-6 ...">
+          </svg>
         </div>
 
-        <div className="w-100">
-          {/* <img
-            src={img}
-            className="w-[100%] h-[auto]"
-            alt="background defining business logic"
-          /> */}
-        </div>
       </div>
       <div className="flex relative w-100">
         <div className={`w-10/12 pt-[40px]`}>
