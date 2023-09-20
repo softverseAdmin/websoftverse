@@ -1,5 +1,5 @@
-import React from "react";
-import img from "../../assets/images/home.jpeg";
+import React from 'react';
+import video from "../../assets/images/web-head.mp4";
 import { styles } from "../styles";
 import InfiniteSlider from "./Slider";
 import about from "../../assets/images/aboutpc.jpeg";
@@ -11,7 +11,7 @@ export default function Main() {
   return (
     <div className="bg-[#f7f7f7] min-w-screen">
       <div className="flex justify-center items-center w-100">
-        <div className="w-3/12 gap-5 flex justify-start flex-col items-center">
+        <div className=" gap-5 flex justify-start flex-col items-center">
           <div className="w-100">
             <RevealOnScroll>
               {/* <h2 className={`${styles.sectionHeadText} p-2 `}>Title</h2>
@@ -19,12 +19,15 @@ export default function Main() {
             </RevealOnScroll>
           </div>
         </div>
-        <div className="w-9/12">
-          <img
+        <div className={`relative w-full h-screen bg-center bg-no-repeat bg-fixed bg-cover `} style={{ backgroundImage: `url(${video})` }}>
+        </div>
+
+        <div className="w-100">
+          {/* <img
             src={img}
             className="w-[100%] h-[auto]"
             alt="background defining business logic"
-          />
+          /> */}
         </div>
       </div>
       <div className="flex relative w-100">
@@ -195,7 +198,7 @@ export default function Main() {
                 />
                 <div className={`${styles.padding}`}>
                   <div className="font-bold text-3xl mb-4">{title}</div>
-                  <p class="text-gray-700 my-4 text-2xl leading-10">{text}</p>
+                  <p className="text-gray-700 my-4 text-2xl leading-10">{text}</p>
                 </div>
                 <div
                   className={`flex items-center justify-end gap-5 py-3 my-3`}
