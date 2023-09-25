@@ -1,8 +1,5 @@
 import "./Menu.css";
-import twitter from "../../assets/images/icons8-twitter-100.png";
-import youtube from "../../assets/images/icon-youtube.png";
 import { CiTwitter, CiYoutube } from "react-icons/ci";
-import {SlSocialTwitter} from "react-icons/sl";
 
 export default function Menu() {
   function toggleMenu(e) {
@@ -10,7 +7,7 @@ export default function Menu() {
     const slideMenu = document.getElementById("slide-menu");
     slideMenu.classList.toggle("open");
   }
-
+ 
   return (
     <div>
       <nav className="header-nav">
@@ -124,25 +121,25 @@ export default function Menu() {
               </li>
             </ul>
 
-            <ul class="gnav-sns">
-              <li class="sns-twitter m-4">
+            <ul className="gnav-sns">
+              <li className="sns-twitter m-4">
                 <a
                   href="#!"
                   className="text-white hover:text-white"
                   target="_blank"
                 >
                   <CiTwitter size={"40"} />
-                  {/* <img class="gnav-icon" src={twitter} alt="Twitter" /> */}
+                  {/* <img className="gnav-icon" src={twitter} alt="Twitter" /> */}
                 </a>
               </li>
-              <li class="sns-youtube m-4">
+              <li className="sns-youtube m-4">
                 <a
                   href="#!"
                   className="text-white  hover:text-white"
                   target="_blank"
                 >
                   <CiYoutube size={"40"} />
-                  {/* <img class="gnav-icon bg-white" src={youtube} alt="YouTube" /> */}
+                  {/* <img className="gnav-icon bg-white" src={youtube} alt="YouTube" /> */}
                 </a>
               </li>
             </ul>

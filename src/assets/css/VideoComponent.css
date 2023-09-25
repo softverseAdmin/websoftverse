@@ -1,0 +1,10 @@
+/* VideoComponent.css */
+.video-fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-in; /* Adjust the duration and timing function as needed */
+  }
+  
+  .video-fade-in.loaded {
+    opacity: 1;
+  }
+  
