@@ -17,7 +17,7 @@ body {
 	-webkit-text-size-adjust: 100%;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	background: url(./assets/images/contents-bg.png) 0 0;
+	background: url(../../assets/images/contents-bg.png) 0 0;
 	background-size: 500px 500px;
 }
 a {
@@ -46,7 +46,7 @@ img {
 .footer_cta-sec {
 	margin-bottom: 70px;
 	padding: 50px 8% 60px;
-	background: url(./assets/images/contact-bg_pc.jpg) center center;
+	background: url(../../assets/images/contact-bg_pc.jpg) center center;
 	background-size: cover;
 	color: #fff;
 }
@@ -99,7 +99,7 @@ img {
 	width: 30px;
 	height: 13px;
 	margin: 0 auto 50px;
-	background: url(./assets/images/page-top.png) 0 0 no-repeat;
+	background: url(../../assets/images/page-top.png) 0 0 no-repeat;
 	background-size: cover;
 }
 /** footer-gnav **/
@@ -257,7 +257,7 @@ img {
 	right: -12px;
 	width: 4px;
 	height: 7px;margin-top: -3px;
-	background: url(./assets/images/breadcrumb-arrow.png) 0 0 no-repeat;
+	background: url(../../assets/images/breadcrumb-arrow.png) 0 0 no-repeat;
 	background-size: 4px 7px;
 }
 .breadcrumbs-list li span {
@@ -485,7 +485,7 @@ img {
 	left: 0;
 	width: 22px;
 	height: 15.7px;
-	background: url(./assets/images/icon-youtube.png) 0 0 no-repeat;
+	background: url(../../assets/images/icon-youtube.png) 0 0 no-repeat;
 	background-size: cover;
 }
 
@@ -578,7 +578,7 @@ img {
 .page-visual_ttl .ttl {
 	display: inline-block;
 	padding: 33px 30px 0 60px;
-	background: url(./assets/images/contents-bg.png) 0 0;
+	background: url(../../assets/images/contents-bg.png) 0 0;
 	background-size: 500px 500px;
 	font-size: 1.8rem;
 	letter-spacing: 0.1em;
@@ -1311,7 +1311,7 @@ button[type="submit"]:focus {
 .footer_cta-sec {
 	margin-bottom: 120px;
 	padding: 70px 10% 70px;
-	background: url(./assets/images/contact-bg_pc.jpg) center center;
+	background: url(../../assets/images/contact-bg_pc.jpg) center center;
 	background-size: cover;
 	color: #fff;
 }
@@ -1368,7 +1368,7 @@ button[type="submit"]:focus {
 	width: 30px;
 	height: 13px;
 	margin: 0 auto 80px;
-	background: url(./assets/images/page-top.png) 0 0 no-repeat;
+	background: url(../../assets/images/page-top.png) 0 0 no-repeat;
 	background-size: cover;
 }
 /** footer-gnav **/
@@ -1472,7 +1472,7 @@ button[type="submit"]:focus {
 @media only screen and (min-width: 960px) {
 
 body {
-	background: url(./assets/images/contents-bg.png) 0 0;
+	background: url(../../assets/images/contents-bg.png) 0 0;
 	background-size: 700px 700px;
 }
 .pc {
@@ -1551,7 +1551,7 @@ img {
 	right: -17px;
 	width: 4px;
 	height: 7px;margin-top: -3px;
-	background: url(./assets/images/breadcrumb-arrow.png) 0 0 no-repeat;
+	background: url(../../assets/images/breadcrumb-arrow.png) 0 0 no-repeat;
 	background-size: 4px 7px;
 }
 .breadcrumbs-list li span {
@@ -1809,7 +1809,7 @@ img {
 	left: 0;
 	width: 22px;
 	height: 15.7px;
-		background: url(./assets/images/icon-youtube.png) 0 0 no-repeat;
+		background: url(../../assets/images/icon-youtube.png) 0 0 no-repeat;
 	background-size: cover;
 }
 
@@ -1907,7 +1907,7 @@ img {
 .page-visual_ttl .ttl {
 	display: inline-block;
 	padding: 53px 65px 0 95px;
-	background: url(./assets/images/contents-bg.png) 0 0;
+	background: url(../../assets/images/contents-bg.png) 0 0;
 	background-size: 700px 700px;
 	font-size: 2.8rem;
 	letter-spacing: 0.1em;
@@ -2839,7 +2839,7 @@ button[type="submit"]:focus {
 .footer_cta-sec {
 	margin-bottom: 120px;
 	padding: 120px 10% 130px;
-	background: url(./assets/images/contact-bg_pc.jpg) center center;
+	background: url(../../assets/images/contact-bg_pc.jpg) center center;
 	background-size: cover;
 	color: #fff;
 }
@@ -2904,7 +2904,7 @@ button[type="submit"]:focus {
 	width: 30px;
 	height: 13px;
 	margin: 0 auto 80px;
-	background: url(./assets/images/page-top.png) 0 0 no-repeat;
+	background: url(../../assets/images/page-top.png) 0 0 no-repeat;
 	background-size: cover;
 	transition: opacity .3s;
 }
