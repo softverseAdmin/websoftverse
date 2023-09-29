@@ -1,3 +1,46 @@
+@charset "utf-8";
+
+/* reset css */
+html,body,h1,h2,h3,h4,h5,h6,p,div,
+ul,ol,li,dl,dt,dd,
+table,caption,th,td,
+form,button,label,address,blockquote,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border:0;
+	outline:0;
+	font-size: 100%;
+	font-weight: normal;
+}
+
+/* common.css
+----------------------------------------- */
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: 'Noto Serif JP', serif;
+	font-size: 1.2rem;
+	color: #111;
+	line-height: 1.8;
+	letter-spacing: 0.1em;
+	text-align: left;
+	font-weight: 500;
+	-webkit-text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	/* background: url(../images/common/contents-bg.png) 0 0; */
+	background-size: 500px 500px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
 div {
     display: block;
 }
@@ -313,3 +356,4 @@ ol, ul {
 .gnav-icon {
 	height: 2.4rem;
 }
+
