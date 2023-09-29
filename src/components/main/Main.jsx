@@ -1,4 +1,4 @@
-import React from 'react';
+import { useState, useEffect } from "react";
 import video from "../../assets/images/web-head.mp4";
 import { styles } from "../styles";
 import InfiniteSlider from "./Slider";
@@ -6,28 +6,99 @@ import about from "../../assets/images/aboutpc.jpeg";
 import bc from "../../assets/images/bc.jpeg";
 import { data, file, holder, QA } from "./data.js";
 import RevealOnScroll from "./Fade";
+import ab from "../../assets/images/aboutpc.jpeg";
 
 export default function Main() {
+  const [opac, setOpacity] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Get scroll position
+      const scrollPosition = window.scrollY;
+      // Calculate opacity value based on scroll position
+      const opacityValue = scrollPosition / 150.0;
+      // Update the state to reflect the new opacity value
+      setOpacity(opacityValue);
+    };
+
+    // Add scroll event listener
+    window.addEventListener("scroll", handleScroll);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <div className="bg-[#f7f7f7] min-w-screen">
       <div className="flex justify-center items-center w-100">
-        <div className=" gap-5 flex justify-start flex-col items-center">
-          <div className="w-100">
-            <RevealOnScroll>
-              {/* <h2 className={`${styles.sectionHeadText} p-2 `}>Title</h2>
-              <p className={`${styles.sectionSubText} p-2`}>We Are The Best</p> */}
-            </RevealOnScroll>
+        <div
+          className={`w-full h-screen bg-center bg-no-repeat bg-fixed bg-cover z-[1] 
+          ${
+            opac
+              ? "blur-xl animate-pulse ease-out delay-[2000] transition-opacity duration-[2000]"
+              : ""
+          }
+           
+        `}
+          style={{ backgroundImage: `url(${video})` }}
+        >
+          <div
+            style={{
+              opacity: opac,
+            }}
+            className={`w-full h-screen`}
+          ></div>
+          <div className="article w-500 h-2000">
+            <h1 className="font-jaf-bernino-sans text-white text-5xl fixed z-9999 top-1/2 left-1/2 -mt-12 -ml-103">
+              Your Heading
+            </h1>
           </div>
-        </div>
-        <div className={`relative w-full h-screen bg-center bg-no-repeat bg-fixed bg-cover `} style={{ backgroundImage: `url(${video})` }}>
-          <div className='object-fill h-full w-full bg-black opacity-50 text-white z-10 text-9xl text-center'>
-            <h1 className='h-full opacity-90'>Softverse Pvt ltd.</h1>
+          {/* <div className="object-fill h-full w-full bg-black opacity-50 text-white z-10 text-9xl text-center">
+            <h1 className="h-full opacity-90">Softverse Pvt ltd.</h1>
           </div>
-          <svg className="animate-bounce w-6 h-6 ...">
-          </svg>
+          <svg className="animate-bounce w-6 h-6 ..."></svg> */}
         </div>
-
       </div>
+      <div className="flex w-[80vw] mx-auto justify-center items-center relative min-h-[70vh] h-auto bg-[#f4f4f4] shadow-lg">
+        <div className="flex absolute top-[-100]">
+          <div className="flex justify-center items-center w-[30%]">
+            <div className="flex flex-col gap-3">
+              <div className="text-3xl">A</div>
+              <div className="text-3xl">B</div>
+              <div className="text-3xl">O</div>
+              <div className="text-3xl">U</div>
+              <div className="text-3xl">T</div>
+              <div className="text-3xl">U</div>
+              <div className="text-3xl">S</div>
+            </div>
+          </div>
+          <div className="flex w-[70%] gap-5 px-5">
+            <div className="flex flex-col gap-5">
+              <img
+                src={ab}
+                alt="about defining"
+                width={"100px"}
+                height={"100px"}
+              />
+              <h2>Title</h2>
+              <p>This is random text.</p>
+            </div>
+            <div className="flex flex-col gap-5">
+              <img
+                src={ab}
+                alt="about defining"
+                width={"100px"}
+                height={"100px"}
+              />
+              <h2>Title</h2>
+              <p>This is random text.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div className="flex relative w-100">
         <div className={`w-10/12 pt-[40px]`}>
           <RevealOnScroll>
@@ -51,7 +122,6 @@ export default function Main() {
             <InfiniteSlider />
           </div>
         </div>
-
       </div>
       <div className={`${styles.padding} w-full my-4`}>
         <div className="flex mx-auto md:w-8/12 justify-center flex-col items-center">
@@ -130,14 +200,14 @@ export default function Main() {
         </div>
       </div>
       <div className="flex justify-center items-center w-[100vw] my-5">
-          <RevealOnScroll>
-            <div className="flex group realtive items-center gap-5">
-              <hr className="w-[100px] transition-all delay-0 group-hover:w-[110px] border border-[#000]" />
-              <h2 className="font-2xl">行覚寺について</h2>
-              <hr className="w-[100px] transition-all delay-0 group-hover:w-[110px] border border-[#000]" />
-            </div>
-          </RevealOnScroll>
-        </div>
+        <RevealOnScroll>
+          <div className="flex group realtive items-center gap-5">
+            <hr className="w-[100px] transition-all delay-0 group-hover:w-[110px] border border-[#000]" />
+            <h2 className="font-2xl">行覚寺について</h2>
+            <hr className="w-[100px] transition-all delay-0 group-hover:w-[110px] border border-[#000]" />
+          </div>
+        </RevealOnScroll>
+      </div>
       <div className={`${styles.paddingY}`}>
         <div className="grid w-[100vw] sm:w-[100vw] md:w-[90vw] mx-auto px-4 grid-cols-12 gap-5  my-3">
           {file.map((f, index) => {
@@ -196,7 +266,9 @@ export default function Main() {
                 />
                 <div className={`${styles.padding}`}>
                   <div className="font-bold text-3xl mb-4">{title}</div>
-                  <p className="text-gray-700 my-4 text-2xl leading-10">{text}</p>
+                  <p className="text-gray-700 my-4 text-2xl leading-10">
+                    {text}
+                  </p>
                 </div>
                 <div
                   className={`flex items-center justify-end gap-5 py-3 my-3`}
