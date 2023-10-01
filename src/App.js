@@ -1,7 +1,7 @@
 import Footer from './components/footer/Footer';
 import Main from './components/main/Main';
 //import Menu from './components/Menu/Menu';
-import Menus from './components/Menu/Menus';
+import Menu from './components/Menu/Menu';
 
 function App() {
   return (
