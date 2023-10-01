@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <div className="header bg-transparent">
-        <Menus />
+        <Menu />
       </div>
       <div className="main">
         <Main />
