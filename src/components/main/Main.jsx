@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import video from "../../assets/images/web-head.mp4";
 import { styles } from "../styles";
 import InfiniteSlider from "./Slider";
@@ -10,51 +9,22 @@ import ab from "../../assets/images/aboutpc.jpeg";
 import imageMountain from "../../assets/images/card-top.jpg"
 
 export default function Main() {
-  const [opac, setOpacity] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      // Get scroll position
-      const scrollPosition = window.scrollY;
-      // Calculate opacity value based on scroll position
-      const opacityValue = scrollPosition / 150.0;
-      // Update the state to reflect the new opacity value
-      setOpacity(opacityValue);
-    };
-
-    // Add scroll event listener
-    window.addEventListener("scroll", handleScroll);
-
-    // Clean up the event listener when the component unmounts
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   return (
     <div className="bg-[#f7f7f7] min-w-screen">
       <div className="flex justify-center items-center w-100">
         <div
-          className={`w-full h-screen bg-center bg-no-repeat bg-fixed bg-cover z-[1] 
-          ${
-            opac
-              ? "blur-xl animate-pulse ease-out delay-[2000] transition-opacity duration-[2000]"
-              : ""
-          }
-           
-        `}
+          className={`w-full h-screen bg-center bg-no-repeat bg-fixed bg-cover z-[1] `}
           style={{ backgroundImage: `url(${video})` }}
         >
-          <div
-            style={{
-              opacity: opac,
-            }}
-            className={`w-full h-screen`}
-          ></div>
-          <div className="article">
-            <h1 className="font-jaf-bernino-sans text-white text-5xl absolute z-9999 top-1/2 left-1/2 -mt-12 -ml-103">
-              SOFTVERSE
-            </h1>
+          <div className="w-[80vw] mx-auto h-screen flex items-center">
+            <div className={`${styles.paddingX} flex gap-5 flex-col`}>
+              <h1 className="text-[30px] text-white">We Are Top Gun</h1>
+              <h1 className="text-[30px] text-white">
+                We Are Top Gun We Are Top Gun
+              </h1>
+              <p className="text-3xl text-white"> Smart Logistics Systems. </p>
+            </div>
           </div>
         </div>
       </div>
@@ -73,56 +43,62 @@ export default function Main() {
             </div>
           </RevealOnScroll>
           <div className={`mx-3 pt-2 `}>
-          <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-              <div
-                class="block rounded-lg bg-white text-white text-center shadow-lg dark:bg-neutral-700 md:col-span-2 lg:col-span-1">
-              <div class="rounded overflow-hidden shadow-lg">
-                <img className="w-full" src={imageMountain} alt="Sunset in the mountains" />
-                  <div class="px-6 py-4">
-                    <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
-                    <p class="text-white text-base">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+            <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+              <div class="block rounded-lg bg-white text-white text-center shadow-lg dark:bg-neutral-700 md:col-span-2 lg:col-span-1">
+                <div class="rounded overflow-hidden shadow-lg">
+                  <img
+                    className="w-full"
+                    src={imageMountain}
+                    alt="Sunset in the mountains"
+                  />
+                  <div class="px-6 mt-4 py-4">
+                    <div class="font-bold text-xl text-left text-black mb-2">
+                      The Coldest Sunset
+                    </div>
+                    <p class="text-black text-base">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Voluptatibus quia, nulla! Maiores et perferendis eaque,
+                      exercitationem praesentium nihil.
                     </p>
                   </div>
-                  <div class="px-6 pt-4 pb-2">
-                    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
-                    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
-                    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
-                  </div>
-              </div>
-              </div>
-              <div
-                class="block rounded-lg bg-white text-white text-center shadow-lg dark:bg-neutral-700 md:col-span-1 lg:col-span-1">
-                <div class="rounded overflow-hidden shadow-lg">
-                  <img className="w-full" src={imageMountain} alt="Sunset in the mountains" />
-                    <div class="px-6 py-4">
-                      <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
-                      <p class="text-white text-base">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
-                      </p>
-                    </div>
-                    <div class="px-6 pt-4 pb-2">
-                      <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
-                      <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
-                      <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
-                    </div>
                 </div>
               </div>
-              <div
-                class="block rounded-lg bg-white text-white text-center shadow-lg dark:bg-neutral-700 md:col-span-1 lg:col-span-1">
-                  <div class="rounded overflow-hidden shadow-lg">
-                  <img className="w-full" src={imageMountain} alt="Sunset in the mountains" />
-                    <div class="px-6 py-4">
-                      <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
-                      <p class="text-white text-base">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
-                      </p>
+              <div class="block rounded-lg bg-white text-white text-center shadow-lg dark:bg-neutral-700 md:col-span-1 lg:col-span-1">
+                <div class="rounded overflow-hidden shadow-lg">
+                  <img
+                    className="w-full"
+                    src={imageMountain}
+                    alt="Sunset in the mountains"
+                  />
+                  <div class="px-6 mt-4 py-4">
+                    <div class="font-bold text-left  text-black text-xl mb-2">
+                      The Coldest Sunset
                     </div>
-                    <div class="px-6 pt-4 pb-2">
-                      <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
-                      <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
-                      <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
+                    <p class="text-black text-base">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Voluptatibus quia, nulla! Maiores et perferendis eaque,
+                      exercitationem praesentium nihil.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="block rounded-lg bg-white text-white text-center shadow-lg dark:bg-neutral-700 md:col-span-1 lg:col-span-1">
+                <div class="rounded overflow-hidden shadow-lg">
+                  <img
+                    className="w-full"
+                    src={imageMountain}
+                    alt="Sunset in the mountains"
+                  />
+                  <div class="px-6 mt-4 py-4">
+                    <div class="font-bold text-left  text-black text-xl mb-2">
+                      The Coldest Sunset
                     </div>
+                    <p class="text-black text-base">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Voluptatibus quia, nulla! Maiores et perferendis eaque,
+                      exercitationem praesentium nihil.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -130,12 +106,12 @@ export default function Main() {
         </div>
       </div>
       <div className="flex justify-end items-center w-[90vw] my-5">
-          <RevealOnScroll>
-            <div className="flex group realtive items-center gap-5">
-              <hr className="w-[100px] transition-all delay-0 group-hover:w-[110px] border border-[#000]" />
-              <h2 className="font-2xl">行覚寺について</h2>
-            </div>
-          </RevealOnScroll>
+        <RevealOnScroll>
+          <div className="flex group realtive items-center gap-5">
+            <hr className="w-[100px] transition-all delay-0 group-hover:w-[110px] border border-[#000]" />
+            <h2 className="font-2xl">行覚寺について</h2>
+          </div>
+        </RevealOnScroll>
       </div>
       <div
         className={`${styles.paddingY}`}
