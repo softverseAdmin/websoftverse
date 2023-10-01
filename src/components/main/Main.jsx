@@ -7,6 +7,7 @@ import bc from "../../assets/images/bc.jpeg";
 import { data, file, holder, QA } from "./data.js";
 import RevealOnScroll from "./Fade";
 import ab from "../../assets/images/aboutpc.jpeg";
+import imageMountain from "../../assets/images/card-top.jpg"
 
 export default function Main() {
   const [opac, setOpacity] = useState(0);
@@ -50,55 +51,136 @@ export default function Main() {
             }}
             className={`w-full h-screen`}
           ></div>
-          <div className="article w-500 h-2000">
-            <h1 className="font-jaf-bernino-sans text-white text-5xl fixed z-9999 top-1/2 left-1/2 -mt-12 -ml-103">
-              Your Heading
+          <div className="article">
+            <h1 className="font-jaf-bernino-sans text-white text-5xl absolute z-9999 top-1/2 left-1/2 -mt-12 -ml-103">
+              SOFTVERSE
             </h1>
           </div>
-          {/* <div className="object-fill h-full w-full bg-black opacity-50 text-white z-10 text-9xl text-center">
-            <h1 className="h-full opacity-90">Softverse Pvt ltd.</h1>
-          </div>
-          <svg className="animate-bounce w-6 h-6 ..."></svg> */}
         </div>
       </div>
-      <div className="flex w-[80vw] mx-auto justify-center items-center relative min-h-[70vh] h-auto bg-[#f4f4f4] shadow-lg">
-        <div className="flex absolute top-[-100]">
-          <div className="flex justify-center items-center w-[30%]">
-            <div className="flex flex-col gap-3">
-              <div className="text-3xl">A</div>
-              <div className="text-3xl">B</div>
-              <div className="text-3xl">O</div>
-              <div className="text-3xl">U</div>
-              <div className="text-3xl">T</div>
-              <div className="text-3xl">U</div>
-              <div className="text-3xl">S</div>
+      <div className="flex relative w-100">
+        <div className={`w-full pt-[40px]`}>
+          <RevealOnScroll>
+            <div
+              className={`${styles.paddingY} realtive group w-[220px] flex justify-end items-center gap-7`}
+            >
+              <hr className="w-[100px] absolute left-0 group-hover:w-[110px] transition-all  delay-0 border-black" />
+              <h1
+                className={`${styles.sectionSubText} xs:hidden hover:opacity-50 cursor-pointer`}
+              >
+                ABOUT US
+              </h1>
             </div>
-          </div>
-          <div className="flex w-[70%] gap-5 px-5">
-            <div className="flex flex-col gap-5">
-              <img
-                src={ab}
-                alt="about defining"
-                width={"100px"}
-                height={"100px"}
-              />
-              <h2>Title</h2>
-              <p>This is random text.</p>
-            </div>
-            <div className="flex flex-col gap-5">
-              <img
-                src={ab}
-                alt="about defining"
-                width={"100px"}
-                height={"100px"}
-              />
-              <h2>Title</h2>
-              <p>This is random text.</p>
+          </RevealOnScroll>
+          <div className={`mx-3 pt-2 `}>
+          <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+              <div
+                class="block rounded-lg bg-white text-white text-center shadow-lg dark:bg-neutral-700 md:col-span-2 lg:col-span-1">
+              <div class="rounded overflow-hidden shadow-lg">
+                <img className="w-full" src={imageMountain} alt="Sunset in the mountains" />
+                  <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
+                    <p class="text-white text-base">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+                    </p>
+                  </div>
+                  <div class="px-6 pt-4 pb-2">
+                    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
+                    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
+                    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
+                  </div>
+              </div>
+              </div>
+              <div
+                class="block rounded-lg bg-white text-white text-center shadow-lg dark:bg-neutral-700 md:col-span-1 lg:col-span-1">
+                <div class="rounded overflow-hidden shadow-lg">
+                  <img className="w-full" src={imageMountain} alt="Sunset in the mountains" />
+                    <div class="px-6 py-4">
+                      <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
+                      <p class="text-white text-base">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+                      </p>
+                    </div>
+                    <div class="px-6 pt-4 pb-2">
+                      <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
+                      <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
+                      <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
+                    </div>
+                </div>
+              </div>
+              <div
+                class="block rounded-lg bg-white text-white text-center shadow-lg dark:bg-neutral-700 md:col-span-1 lg:col-span-1">
+                  <div class="rounded overflow-hidden shadow-lg">
+                  <img className="w-full" src={imageMountain} alt="Sunset in the mountains" />
+                    <div class="px-6 py-4">
+                      <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
+                      <p class="text-white text-base">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+                      </p>
+                    </div>
+                    <div class="px-6 pt-4 pb-2">
+                      <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
+                      <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
+                      <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
+                    </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-
+      <div className="flex justify-end items-center w-[90vw] my-5">
+          <RevealOnScroll>
+            <div className="flex group realtive items-center gap-5">
+              <hr className="w-[100px] transition-all delay-0 group-hover:w-[110px] border border-[#000]" />
+              <h2 className="font-2xl">行覚寺について</h2>
+            </div>
+          </RevealOnScroll>
+      </div>
+      <div
+        className={`${styles.paddingY}`}
+        style={{
+          background: `url(${bc}) no-repeat center`,
+        }}
+      >
+        <div
+          className={`${styles.paddingY} grid w-[100vw] md:w-[80vw] lg:w-[70vw] bg-transparent mx-auto px-4 grid-cols-12 gap-8 my-3`}
+        >
+          {data.map((d, index) => {
+            console.log(d);
+            const { title, text, footer, image } = d;
+            return (
+              <div
+                key={index}
+                className="
+                mx-auto rounded overflow-hidden shadow-lg cursor-pointer 
+                transition-colors duration-1000 ease-in delay-0 hover:shadow-2xl
+                col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-6 xl:col-span-6"
+              >
+                <img
+                  className="w-full"
+                  src={image}
+                  alt="Sunset in the mountains"
+                />
+                <div className={`${styles.padding}`}>
+                  <div className="font-bold text-3xl mb-4">{title}</div>
+                  <p className="text-gray-700 my-4 text-2xl leading-10">
+                    {text}
+                  </p>
+                </div>
+                <div
+                  className={`flex items-center justify-end gap-5 py-3 my-3`}
+                >
+                  <hr className="border-black w-[50px]" />
+                  <span className="px-3 py-1 text-xl font-semibold text-gray-700 mr-2">
+                    {footer}
+                  </span>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
       <div className="flex relative w-100">
         <div className={`w-10/12 pt-[40px]`}>
           <RevealOnScroll>
