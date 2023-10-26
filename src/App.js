@@ -1,5 +1,6 @@
 import Footer from './components/footer/Footer';
 import Main from './components/main/Main';
+//import Menu from './components/Menu/Menu';
 import Menu from './components/Menu/Menu';
 
 function App() {
